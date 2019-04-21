@@ -1,0 +1,24 @@
+#slides {
+    list-style-type: none;
+   }
+img {
+  max-width: 50%;
+  height: auto;
+}
+@media only screen and (min-device-width: 400px) { img
+     {
+  max-width:80%;
+    height: auto;
+  }
+}
+
+.hide {
+  display: none;
+}
+  .Unhide {
+  position: absolute;
+  display: block;
+}
+
+
+

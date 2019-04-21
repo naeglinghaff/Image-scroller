@@ -1,5 +1,10 @@
 #slides {
     list-style-type: none;
+    display: -webkit-flex;
+  -webkit-flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row-reverse;
+
    }
 img {
   max-width: 50%;

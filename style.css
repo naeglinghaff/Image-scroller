@@ -19,6 +19,24 @@ img {
   position: absolute;
   display: block;
 }
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  width:0;
+  height:0;
+  border-style:solid;
+}
 
+#arrow-left {
+  border-width: 20px 30px 20px 0px;
+  left: 0;
+  margin-left: 5px;
+  border-color: transparent #742222 transparent transparent;
+}
 
-
+#arrow-right {
+  border-width: 20px 0px 20px 30px;
+  right: 0;
+  margin-right: 5px;
+  border-color: transparent transparent transparent #742222;
+}

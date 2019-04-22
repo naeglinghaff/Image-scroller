@@ -1,15 +1,14 @@
-#slides {
-    list-style-type: none;
-    display: -webkit-flex;
-  -webkit-flex-direction: row-reverse;
-  display: flex;
-  flex-direction: row-reverse;
-
-   }
-img {
-  max-width: 50%;
-  height: auto;
+#slider {
+  padding-top: 10%;
+  padding-left: 55%;
 }
+
+img {
+  max-width: 60%;
+  height: auto;
+  z-index:0;    
+}
+
 @media only screen and (min-device-width: 400px) { img
      {
   max-width:80%;
@@ -22,7 +21,6 @@ img {
 }
   .Unhide {
   position: absolute;
-  display: block;
 }
 .arrow {
   cursor: pointer;
@@ -30,18 +28,25 @@ img {
   width:0;
   height:0;
   border-style:solid;
+  z-index:1;
+  display: inline-block;
+ 
 }
 
 #arrow-left {
-  border-width: 20px 30px 20px 0px;
-  left: 0;
+  border-width: 15px 25px 15px 0px;
   margin-left: 5px;
   border-color: transparent #742222 transparent transparent;
+  left: 56%;
+  top: 45%;
+  
 }
 
 #arrow-right {
-  border-width: 20px 0px 20px 30px;
-  right: 0;
+  border-width: 15px 0px 15px 25px;
   margin-right: 5px;
   border-color: transparent transparent transparent #742222;
+  right: 10%;
+  top:45%;
+  
 }

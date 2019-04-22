@@ -62,14 +62,14 @@ function show(ind){
     slide.src = iList[ind];
     slide.classList.remove('imgoff');
     slide.classList.add('imgon');
-    slide.style.opacity = 1;  
+    //slide.style.opacity = 1;  
 }
 
 //hides the image with effect
-function hide(ind){
+function hide(){
     slide.classList.remove('imgon');
     slide.classList.add('imgoff');
-    slide.style.opacity = 0; 
+    //slide.style.opacity = 0; 
 }
 
 //right arrow click event

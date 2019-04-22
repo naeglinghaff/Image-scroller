@@ -34,7 +34,7 @@ img {
 #arrow-left {
   border-width: 15px 25px 15px 0px;
   margin-left: 5px;
-  border-color: transparent #0000 transparent transparent;
+  border-color: transparent #FFFFFF transparent transparent;
   left: 56%;
   top: 32%;
   
@@ -43,7 +43,7 @@ img {
 #arrow-right {
   border-width: 15px 0px 15px 25px;
   margin-right: 5px;
-  border-color: transparent transparent transparent #0000;
+  border-color: transparent transparent transparent #FFFFFF;
   right: 10%;
   top:32%;
   

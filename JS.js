@@ -1,6 +1,6 @@
 var slideImages = document.querySelectorAll('.slide');
-var arrowL = document.querySelector ('#arrow-left');
-var arrowR = document.querySelector('#arrow-right');
+var arrowL = document.getElementById ('arrow-left');
+var arrowR = document.getElementById('arrow-right');
 var buttonPause = document.getElementById('pausebutton');
 var displayIndex = 0; //index of image we want displayed
 

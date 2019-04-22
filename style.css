@@ -34,17 +34,17 @@ img {
 #arrow-left {
   border-width: 15px 25px 15px 0px;
   margin-left: 5px;
-  border-color: transparent #742222 transparent transparent;
+  border-color: transparent #0000 transparent transparent;
   left: 56%;
-  top: 45%;
+  top: 32%;
   
 }
 
 #arrow-right {
   border-width: 15px 0px 15px 25px;
   margin-right: 5px;
-  border-color: transparent transparent transparent #742222;
+  border-color: transparent transparent transparent #0000;
   right: 10%;
-  top:45%;
+  top:32%;
   
 }

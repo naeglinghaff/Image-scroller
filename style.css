@@ -19,13 +19,13 @@ img {
 } 
 
 .imgon {
-  animation-name: fade-in;
+  animation-name: fadein;
   animation-duration: 1.5s;
   /*display: inline-block;*/
   /*transition: 0.6s ease; */
 }
 .imgoff {
-  animation-name: fade-out;
+  animation-name: fadeout;
   animation-duration: 2s;
   /*display: none;*/
   

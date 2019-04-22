@@ -16,12 +16,10 @@ img {
   }
 }
 
-.hide {
-  display: none;
-}
-  .Unhide {
+.slide {
   position: absolute;
 }
+
 .arrow {
   cursor: pointer;
   position: absolute;

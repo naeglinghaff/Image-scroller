@@ -15,24 +15,56 @@
   <div id="slider">
       <div id="arrow-left" class="arrow"></div>
       <div id= slidecontent>
-    <div id="slide1" class="hide"><img src="/Images/image1.JPG" alt="Me myself and I"></img>
+    <div id="slide1" class="slide"><img src="/Images/image1.JPG" alt="Me myself and I"></img>
     </div>
 
-    <div id="slide2" class="hide"><img src="/Images/image2.jpg" alt="Surfboards and a sunset"></img>
+    <div id="slide2" class="slide"><img src="/Images/image2.jpg" alt="Surfboards and a sunset"></img>
     </div>
 
-    <div id="slide3" class="hide"><img src="/Images/image3.jpg" alt="Shot of girl from over the shoulder"></img>
+    <div id="slide3" class="slide"><img src="/Images/image3.jpg" alt="Shot of girl from over the shoulder"></img>
     </div>
 
-    <div id="slide4" class="hide"><img src="/Images/image4.jpg" alt="Dogs sleeping on a beach aka how I felt after coding this carousel"></img>
+    <div id="slide4" class="slide"><img src="/Images/image4.jpg" alt="Dogs sleeping on a beach aka how I felt after coding this carousel"></img>
     </div>
   </div>
     <div id="arrow-right" class="arrow"></div>
   </div>
   
+<script>
+  let slideImages = document.querySelectorAll('.slide')
+  let arrowL = document.querySelector ('#arrow-left')
+  let arrowR = document.querySelector('#arrow-right')
+  let current = 0;
 
-  <script>
-    document.getElementById("slide1").className = "Unhide"
+  //hides all images
+   function reset() {
+     for(let i = 0; i <slideImages.length; i++){
+       slideImages[i].style.display = 'none';
+     }
+   }
+//starts the slide
+   function startSlide() {
+     reset();
+     slideImages[0].style.display = 'block';
+   }
+
+   //shows the last image
+   function slideLeft (){
+     reset();
+     slideImages[current - 1].style.display = 'block';
+     current--;
+   }
+
+   //left arrow click event
+   arrowL.addEventListener('click', function(){
+     if (current === 0) {
+       current = slideImages.length;
+     }
+     slideLeft();
+   });
+
+startSlide();
+
   </script>
 
 </body>

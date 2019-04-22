@@ -24,7 +24,7 @@ function previous(now) {
     if (typeof now === 'undefined') {
         ret = displayIndex - 1;
     } else {
-        ret = now;   
+        ret = now - 1;   
     }
     if (ret < 0)
         ret = slideImages.length - 1;

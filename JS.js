@@ -8,7 +8,8 @@ var displayIndex = 0; //index of image we want displayed
 //hides all images
 function reset() {
      for(let i = 0; i < slideImages.length; i++){
-       slideImages[i].style.display = 'none';
+       //slideImages[i].style.display = 'none';
+       slideImages[i].style.opacity = 0;
      }
 }
 
@@ -43,9 +44,9 @@ function startSlide() {
 function slideLeft (){
      var ret = previous();
      displayIndex = ret;
-     slideImages[ret].style.display = 'none';
+     hide(ret);
      ret = previous(ret);
-     slideImages[ret].style.display = 'inline-block';
+     show(ret);
 }
 
 //left arrow click event
@@ -56,9 +57,25 @@ arrowL.addEventListener('click', function(){
 //show the next image
 function slideRight(){
      var ret = previous();
-     slideImages[ret].style.display = 'none';
-     slideImages[displayIndex].style.display = 'inline-block';
+     hide(ret);
+     show(displayIndex);
      displayIndex = next();
+}
+
+//shows the image with effect
+function show(ind){
+    //slideImages[ind].style.display = 'inline-block';
+    slideImages[ind].classList.remove('imgoff');
+    slideImages[ind].classList.add('imgon');
+    slideImages[ind].style.opacity = 1;
+}
+
+//hides the image with effect
+function hide(ind){
+    //slideImages[ind].style.display = 'none';
+    slideImages[ind].classList.remove('imgon');
+    slideImages[ind].classList.add('imgoff');
+    slideImages[ind].style.opacity = 0;
 }
 
 //right arrow click event
@@ -69,7 +86,7 @@ arrowR.addEventListener('click', function(){
 //loops to the right
 function alwaysSlideRight() {
     slideRight();
-    tControl = setTimeout (alwaysSlideRight, 1500);
+    tControl = setTimeout (alwaysSlideRight, 2500);
 }
 
 //pauses the loop
@@ -84,11 +101,10 @@ buttonPause.addEventListener('click',pause);
 function play() {
     alwaysSlideRight();
 }
-
 //button play click event
 buttonPlay.addEventListener('click',play);
 
  
 startSlide();
 
-var tControl = setTimeout (alwaysSlideRight, 1500);
+var tControl = setTimeout (alwaysSlideRight, 2500);

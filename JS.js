@@ -8,7 +8,7 @@ var displayIndex = 0; //index of current image we are displaying
 
 //hides all images
 function reset() {
-    slide.style.opacity = 0;
+    //slide.style.opacity = 0;
 }
 
 //to get to next image index

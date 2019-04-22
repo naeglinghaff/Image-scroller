@@ -15,12 +15,12 @@ img {
 
 @keyframes fadeout {
   from {display:'inline-block'; opacity: 1;}
-  to {display: 'none'; opacity: 0;}
+  to {display: 'none'; opacity: 0.1;}
 } 
 
 .imgon {
   animation-name: fade-in;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   /*display: inline-block;*/
   /*transition: 0.6s ease; */
 }

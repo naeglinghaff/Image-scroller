@@ -38,14 +38,15 @@
 
   //hides all images
    function reset() {
-     for(let i = 0; i <slideImages.length; i++){
+     for(let i = 0; i < slideImages.length; i++){
        slideImages[i].style.display = 'none';
      }
    }
+
 //starts the slide
    function startSlide() {
      reset();
-     slideImages[0].style.display = 'inline-block';
+     alwaysSlideRight;
    }
 
    //returns to the last image
@@ -77,6 +78,17 @@
      }
      slideRight();
    });
+
+   //loops to the right
+   function alwaysSlideRight() {
+     slideImages[current + 1].style.display = 'inline-block';
+     current++;
+   }
+   setInterval (alwaysSlideRight, 1000);
+   if (current === slideImages.length) {
+     current = -1;
+  }
+
 
 startSlide();
 

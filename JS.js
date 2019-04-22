@@ -1,23 +1,21 @@
-var slideImages = document.querySelectorAll('.slide');
+var slide = document.getElementById('mainimage');
 var arrowL = document.getElementById ('arrow-left');
 var arrowR = document.getElementById('arrow-right');
 var buttonPause = document.getElementById('pausebutton');
 var buttonPlay = document.getElementById('playbutton');
-var displayIndex = 0; //index of image we want displayed
+var iList = ["Images/image1.JPG", "Images/image2.jpg", "Images/image3.jpg", "Images/image4.jpg"];
+var displayIndex = 0; //index of current image we are displaying
 
 //hides all images
 function reset() {
-     for(let i = 0; i < slideImages.length; i++){
-       //slideImages[i].style.display = 'none';
-       slideImages[i].style.opacity = 0;
-     }
+    slide.style.opacity = 0;
 }
 
 //to get to next image index
 function next() {
     var ret;
     ret = displayIndex + 1;
-    if (ret >= slideImages.length)
+    if (ret >= iList.length)
         ret = 0;
     return ret;
 }
@@ -30,7 +28,7 @@ function previous(now) {
         ret = now - 1;   
     }
     if (ret < 0)
-        ret = slideImages.length - 1;
+        ret = iList.length - 1;
     return ret;
 }
 
@@ -42,11 +40,9 @@ function startSlide() {
 
 //returns to the last image
 function slideLeft (){
-     var ret = previous();
-     displayIndex = ret;
-     hide(ret);
-     ret = previous(ret);
-     show(ret);
+     hide(displayIndex);
+    displayIndex = previous();
+     show(displayIndex);
 }
 
 //left arrow click event
@@ -56,26 +52,24 @@ arrowL.addEventListener('click', function(){
 
 //show the next image
 function slideRight(){
-     var ret = previous();
-     hide(ret);
-     show(displayIndex);
+     hide(displayIndex);
      displayIndex = next();
+     show(displayIndex);
 }
 
 //shows the image with effect
 function show(ind){
-    //slideImages[ind].style.display = 'inline-block';
-    slideImages[ind].classList.remove('imgoff');
-    slideImages[ind].classList.add('imgon');
-    slideImages[ind].style.opacity = 1;
+    slide.src = iList[ind];
+    slide.classList.remove('imgoff');
+    slide.classList.add('imgon');
+    slide.style.opacity = 1;  
 }
 
 //hides the image with effect
 function hide(ind){
-    //slideImages[ind].style.display = 'none';
-    slideImages[ind].classList.remove('imgon');
-    slideImages[ind].classList.add('imgoff');
-    slideImages[ind].style.opacity = 0;
+    slide.classList.remove('imgon');
+    slide.classList.add('imgoff');
+    slide.style.opacity = 0; 
 }
 
 //right arrow click event
@@ -86,7 +80,7 @@ arrowR.addEventListener('click', function(){
 //loops to the right
 function alwaysSlideRight() {
     slideRight();
-    tControl = setTimeout (alwaysSlideRight, 2500);
+    tControl = setTimeout (alwaysSlideRight, 3000);
 }
 
 //pauses the loop
@@ -107,4 +101,4 @@ buttonPlay.addEventListener('click',play);
  
 startSlide();
 
-var tControl = setTimeout (alwaysSlideRight, 2500);
+var tControl = setTimeout (alwaysSlideRight, 3000);

@@ -2,10 +2,6 @@
   padding-top: 10%;
   padding-left: 55%;
 }
-.slide {
-  opacity:  0;
-}
-
 img {
   max-width: 60%;
   height: auto;
@@ -24,13 +20,13 @@ img {
 
 .imgon {
   animation-name: fade-in;
-  animation-duration: 1s;
+  animation-duration: 2s;
   /*display: inline-block;*/
   /*transition: 0.6s ease; */
 }
 .imgoff {
   animation-name: fade-out;
-  animation-duration: 1s;
+  animation-duration: 2s;
   /*display: none;*/
   
 }
@@ -67,8 +63,8 @@ img {
   border-color: transparent transparent transparent #FFFFFF;
   right: 10%;
   top:32%;
-  
-}
+ }
+
 .button-pause {
   background-color: transparent;
   padding: 10px;
@@ -77,11 +73,11 @@ img {
   float: right;
   }
 
-  .button-play {
-    background-color: transparent;
-    padding: 10px;
-    z-index: 2;
-    position: relative;
-    float: right;
-    transition: 0.6s ease;
-    }
+.button-play {
+  background-color: transparent;
+  padding: 10px;
+  z-index: 2;
+  position: relative;
+  float: right;
+  transition: 0.6s ease;
+}

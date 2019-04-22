@@ -42,12 +42,18 @@ function startSlide() {
 function slideLeft (){
      hide(displayIndex);
     displayIndex = previous();
-     show(displayIndex);
+    setTimeout (show, 1500);
 }
 
 //left arrow click event
 arrowL.addEventListener('click', function(){
+    if (tControl) {
+        clearTimeout(tControl);
+}
      slideLeft();
+     if (tControl) {
+        tControl = setTimeout (alwaysSlideRight, 4000);
+     }
 });
 
 //show the next image
@@ -78,19 +84,26 @@ function hide(){
 
 //right arrow click event
 arrowR.addEventListener('click', function(){
+    if (tControl) {
+        clearTimeout(tControl);
+}
      slideRight();
+     if (tControl) {
+        tControl = setTimeout (alwaysSlideRight, 4000);
+     }
 });
 
 //loops to the right
 function alwaysSlideRight() {
     slideRight();
-    //tControl = setTimeout (alwaysSlideRight, 4000);
+    tControl = setTimeout (alwaysSlideRight, 4000);
 }
 
 //pauses the loop
 function pause() {
     if (tControl)
         clearTimeout(tControl);
+    tControl = 0;
 }
 //button pause click event
 buttonPause.addEventListener('click',pause);
@@ -105,4 +118,4 @@ buttonPlay.addEventListener('click',play);
  
 startSlide();
 
-//var tControl = setTimeout (alwaysSlideRight, 4000);
+var tControl = setTimeout (alwaysSlideRight, 4000);

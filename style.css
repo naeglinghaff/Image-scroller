@@ -20,15 +20,11 @@ img {
 
 .imgon {
   animation-name: fadein;
-  animation-duration: 1.5s;
-  /*display: inline-block;*/
-  /*transition: 0.6s ease; */
+  animation-duration: 2s; 
 }
 .imgoff {
   animation-name: fadeout;
   animation-duration: 2s;
-  /*display: none;*/
-  
 }
 
 @media only screen and (min-device-width: 400px) { img

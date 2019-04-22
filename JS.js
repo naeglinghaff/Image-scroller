@@ -54,22 +54,26 @@ arrowL.addEventListener('click', function(){
 function slideRight(){
      hide(displayIndex);
      displayIndex = next();
-     show(displayIndex);
+     setTimeout (show, 1500);
+     
 }
 
 //shows the image with effect
 function show(ind){
+    if (typeof ind === 'undefined') {
+        ind = displayIndex;
+    }  
     slide.src = iList[ind];
     slide.classList.remove('imgoff');
     slide.classList.add('imgon');
-    //slide.style.opacity = 1;  
+    slide.style.opacity = 1;  
 }
 
 //hides the image with effect
 function hide(){
     slide.classList.remove('imgon');
     slide.classList.add('imgoff');
-    //slide.style.opacity = 0; 
+    slide.style.opacity = 0; 
 }
 
 //right arrow click event
@@ -80,7 +84,7 @@ arrowR.addEventListener('click', function(){
 //loops to the right
 function alwaysSlideRight() {
     slideRight();
-    tControl = setTimeout (alwaysSlideRight, 3000);
+    //tControl = setTimeout (alwaysSlideRight, 4000);
 }
 
 //pauses the loop
@@ -101,4 +105,4 @@ buttonPlay.addEventListener('click',play);
  
 startSlide();
 
-var tControl = setTimeout (alwaysSlideRight, 3000);
+//var tControl = setTimeout (alwaysSlideRight, 4000);

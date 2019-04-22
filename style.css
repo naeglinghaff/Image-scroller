@@ -15,11 +15,6 @@ img {
     height: auto;
   }
 }
-
-.slide {
-  position: absolute;
-}
-
 .arrow {
   cursor: pointer;
   position: absolute;
@@ -48,3 +43,10 @@ img {
   top:32%;
   
 }
+.button-pause {
+  background-color: transparent;
+  padding: 10px;
+  z-index: 2;
+  position: relative;
+  float: right;
+  }

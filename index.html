@@ -79,15 +79,21 @@
      slideRight();
    });
 
-   //loops to the right
-   function alwaysSlideRight() {
+  //loops to the right
+  function alwaysSlideRight() {
      slideImages[current + 1].style.display = 'inline-block';
-     current++;
+     current++; {
+       if (current === slideImages.length -1) {
+         current= -1;
+         slideRight();
+       }
+     }
    }
-   setInterval (alwaysSlideRight, 1000);
-   if (current === slideImages.length) {
-     current = -1;
-  }
+   setInterval (alwaysSlideRight, 1500); {
+    }
+    
+  
+   
 
 
 startSlide();

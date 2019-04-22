@@ -50,3 +50,11 @@ img {
   position: relative;
   float: right;
   }
+
+  .button-play {
+    background-color: transparent;
+    padding: 10px;
+    z-index: 2;
+    position: relative;
+    float: right;
+    }

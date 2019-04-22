@@ -2,6 +2,7 @@ var slideImages = document.querySelectorAll('.slide');
 var arrowL = document.getElementById ('arrow-left');
 var arrowR = document.getElementById('arrow-right');
 var buttonPause = document.getElementById('pausebutton');
+var buttonPlay = document.getElementById('playbutton');
 var displayIndex = 0; //index of image we want displayed
 
 //hides all images
@@ -77,8 +78,16 @@ function pause() {
         clearTimeout(tControl);
 }
 //button pause click event
-
 buttonPause.addEventListener('click',pause);
+
+//plays the loop
+function play() {
+    alwaysSlideRight();
+}
+
+//button play click event
+buttonPlay.addEventListener('click',play);
+
  
 startSlide();
 

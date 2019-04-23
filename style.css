@@ -6,7 +6,7 @@
 }
 
 #whole {
-position: relative;
+position: fixed;
 }
 
 img {
@@ -49,18 +49,21 @@ img {
   display: inline-block;
   overflow: hidden;
   font-size: 5vw;
+  max-width: 90%;
+  min-width: 40%;
+  height: auto;
 }
 
 #arrow-left {
-  color: rgb(158, 157, 157);
-  left: 13px;
-  top: 150px;
+  color: rgba(158, 157, 157, 0.589);
+  left: 1vh;
+  top:35%;
 }
 
 #arrow-right {
-  color: rgb(158, 157, 157);
-  right: 145px;
-  top: 150px;
+  color: rgba(158, 157, 157, 0.589);
+  right: -14vh;
+  top:35%;
 }
 
 .button-pause {

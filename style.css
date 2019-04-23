@@ -67,15 +67,17 @@ img {
 }
 
 .button-pause {
-  background-color: transparent;
+  color: rgba(158, 157, 157, 0.589);
   padding: 10px;
   z-index: 2;
   position: relative;
+  border: none;
 }
 
 .button-play {
-  background-color: transparent;
+  color: rgba(158, 157, 157, 0.589);
   padding: 10px;
   z-index: 2;
   position: relative;
+  border: none;
 }

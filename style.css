@@ -65,16 +65,20 @@ img {
   padding: 10px;
   border: none;
   z-index: 2;
-  position: relative;
+  position: fixed;
   cursor: pointer;
 }
 
 #pausebutton {
-  width: 350px;
+  width: 49%;
+  min-width: auto;
+  height: auto;
   left: 0vh;
 }
 
 #playbutton {
-    width: 350px;
-    right: 0vh;
+  width: 49%;
+  min-width: auto;
+  height: auto;
+  right: 0vh;
 }

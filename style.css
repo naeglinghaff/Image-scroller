@@ -1,9 +1,8 @@
 #slider {
   position: fixed;
    top: 55%;
-   left: 50%;
-   transform: translate(-45%, -50%);
-   
+   left: 53%;
+   transform: translate(-47%, -50%);
 }
 
 img {
@@ -35,33 +34,28 @@ img {
 @media only screen and (min-device-width: 400px) { img
      {
   max-width:80%;
-    height: auto;
+  height: auto;
   }
 }
 
 .arrow {
   cursor: pointer;
-  position: relative;
-  width:0;
-  height:0;
-  border-style:solid;
+  position: absolute;
   z-index:1;
   display: inline-block;
- 
+  width: 100px;
+  height:100px;
+  font-size: 100px;
 }
 
 #arrow-left {
-  border-width: 15px 25px 15px 0px;
-  margin-left: 5px;
-  border-color: transparent #FFFFFF transparent transparent;
-  
+  color: gray; 
 }
 
 #arrow-right {
-  border-width: 15px 0px 15px 25px;
-  margin-right: 5px;
-  border-color: transparent transparent transparent #FFFFFF;
- }
+  color: gray;
+  
+}
 
 .button-pause {
   background-color: transparent;

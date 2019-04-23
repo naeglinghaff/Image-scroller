@@ -66,20 +66,15 @@ img {
   border: none;
   z-index: 2;
   position: relative;
-  flex: 100%;
   cursor: pointer;
 }
 
 #pausebutton {
-  flex-direction: row;
-  flex-flow: nowrap;
-  align-items: center;
-  justify-content: center;
+  width: 350px;
+  left: 0vh;
 }
 
 #playbutton {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-flow: nowrap; 
+    width: 350px;
+    right: 0vh;
 }

@@ -6,7 +6,7 @@ var buttonPlay = document.getElementById('playbutton');
 var iList = ["Images/image1.JPG", "Images/image2.jpg", "Images/image3.jpg", "Images/image4.jpg"];
 var displayIndex = 0; //index of current image we are displaying
 
-//to get to next image index
+//to get to next image index in our array
 function next() {
     var ret;
     ret = displayIndex + 1;
@@ -14,7 +14,7 @@ function next() {
         ret = 0;
     return ret;
 }
-//to get to previous image index
+//to get to previous image index in our array
 function previous(now) {
     var ret;
     if (typeof now === 'undefined') {
@@ -110,18 +110,19 @@ function play() {
 //button play click event
 buttonPlay.addEventListener('click',play);
 
+//function for keyboard event to move through images
 function keyIn(event) {
     var key = event.which
-   
+//keycode for left arrow (pauses animation and sends it to the previous image)
     if (key == 37) {
         pause();    
         slideLeft();
+//keycode for right arrow (pauses animation and sends it to the next image)
     } else if (key == 39) {
         pause();
         slideRight();
     }
 };
-
 //keyboardevent
 document.addEventListener("keydown", keyIn);
  

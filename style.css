@@ -5,6 +5,10 @@
    transform: translate(-47%, -50%);
 }
 
+#whole {
+position: relative;
+}
+
 img {
   max-width: 90%;
   height: auto;
@@ -49,11 +53,13 @@ img {
 }
 
 #arrow-left {
-  color: gray; 
+  color: gray;
+  left: 15px;
 }
 
 #arrow-right {
   color: gray;
+  right: 85px;
   
 }
 

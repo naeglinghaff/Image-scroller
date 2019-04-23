@@ -48,33 +48,19 @@ img {
   z-index:1;
   display: inline-block;
   overflow: hidden;
-  font-size: 100px; 
+  font-size: 5vw;
 }
 
 #arrow-left {
-  color: transparent;
+  color: rgb(158, 157, 157);
   left: 13px;
   top: 150px;
-  height: 100px;
 }
 
 #arrow-right {
-  color: transparent;
-  right: 145px;
-  top: 150px;
-}
-
-#arrow-right:hover {
   color: rgb(158, 157, 157);
   right: 145px;
   top: 150px;
-}
-
-#arrow-left:hover {
-  color: rgb(158, 157, 157);
-  left: 13px;
-  top: 150px;
-  height: 100px;
 }
 
 .button-pause {

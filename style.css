@@ -1,16 +1,12 @@
 #slider {
   position: fixed;
-   top: 55%;
-   left: 53%;
-   transform: translate(-47%, -50%);
-}
-
-#whole {
-position: fixed;
+  top: 50%;
+  left: 53%;
+  transform: translate(-50%, -47%);
 }
 
 img {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
   z-index: 0;
 }
@@ -47,37 +43,45 @@ img {
   position: absolute;
   z-index:1;
   display: inline-block;
-  overflow: hidden;
   font-size: 5vw;
-  max-width: 90%;
-  min-width: 40%;
+  max-width: 50%;
   height: auto;
 }
 
 #arrow-left {
-  color: rgba(158, 157, 157, 0.589);
+  color: rgba(158, 157, 157, 0.658);
   left: 1vh;
   top:35%;
 }
 
 #arrow-right {
-  color: rgba(158, 157, 157, 0.589);
-  right: -14vh;
+  color: rgba(158, 157, 157, 0.658);
+  right: 20vh;
   top:35%;
 }
 
-.button-pause {
+.buttons {
   color: rgba(158, 157, 157, 0.589);
   padding: 10px;
+  margin: auto;
+  border: none;
   z-index: 2;
   position: relative;
-  border: none;
+  flex: 50%;
+  cursor: pointer;
 }
 
-.button-play {
-  color: rgba(158, 157, 157, 0.589);
-  padding: 10px;
-  z-index: 2;
-  position: relative;
-  border: none;
+#pausebutton {
+  flex-direction: row;
+  flex-flow: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#playbutton {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-flow: nowrap;
+  
 }

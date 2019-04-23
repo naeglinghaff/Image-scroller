@@ -1,8 +1,18 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 #slider {
   position: fixed;
   top: 50%;
   left: 53%;
   transform: translate(-50%, -47%);
+  font-size: 0;
+  margin-right: 0px;
 }
 
 img {
@@ -33,7 +43,7 @@ img {
 
 @media only screen and (min-device-width: 400px) { img
      {
-  max-width:80%;
+  max-width:100%;
   height: auto;
   }
 }
@@ -56,18 +66,17 @@ img {
 
 #arrow-right {
   color: rgba(158, 157, 157, 0.658);
-  right: 20vh;
+  right: 0%;
   top:35%;
 }
 
 .buttons {
   color: rgba(158, 157, 157, 0.589);
   padding: 10px;
-  margin: auto;
   border: none;
   z-index: 2;
   position: relative;
-  flex: 50%;
+  flex: 100%;
   cursor: pointer;
 }
 
@@ -82,6 +91,5 @@ img {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-flow: nowrap;
-  
+    flex-flow: nowrap; 
 }

@@ -106,9 +106,24 @@ buttonPause.addEventListener('click',pause);
 function play() {
     alwaysSlideRight();
 }
+
 //button play click event
 buttonPlay.addEventListener('click',play);
 
+function keyIn(event) {
+    var key = event.which
+   
+    if (key == 37) {
+        pause();    
+        slideLeft();
+    } else if (key == 39) {
+        pause();
+        slideRight();
+    }
+};
+
+//keyboardevent
+document.addEventListener("keydown", keyIn);
  
 startSlide();
 

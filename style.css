@@ -47,20 +47,34 @@ img {
   position: absolute;
   z-index:1;
   display: inline-block;
-  width: 100px;
-  height:100px;
-  font-size: 100px;
+  overflow: hidden;
+  font-size: 100px; 
 }
 
 #arrow-left {
-  color: gray;
-  left: 15px;
+  color: transparent;
+  left: 13px;
+  top: 150px;
+  height: 100px;
 }
 
 #arrow-right {
-  color: gray;
-  right: 85px;
-  
+  color: transparent;
+  right: 145px;
+  top: 150px;
+}
+
+#arrow-right:hover {
+  color: rgb(158, 157, 157);
+  right: 145px;
+  top: 150px;
+}
+
+#arrow-left:hover {
+  color: rgb(158, 157, 157);
+  left: 13px;
+  top: 150px;
+  height: 100px;
 }
 
 .button-pause {

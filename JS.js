@@ -6,11 +6,6 @@ var buttonPlay = document.getElementById('playbutton');
 var iList = ["Images/image1.JPG", "Images/image2.jpg", "Images/image3.jpg", "Images/image4.jpg"];
 var displayIndex = 0; //index of current image we are displaying
 
-//hides all images
-function reset() {
-    //slide.style.opacity = 0;
-}
-
 //to get to next image index
 function next() {
     var ret;
@@ -34,11 +29,10 @@ function previous(now) {
 
 //starts the slide
 function startSlide() {
-     reset();
      alwaysSlideRight;
    }
 
-//returns to the last image
+//moves to the last image
 function slideLeft (){
      hide(displayIndex);
     displayIndex = previous();

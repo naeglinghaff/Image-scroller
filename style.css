@@ -1,11 +1,13 @@
 header {
-  background-color: linear-gradient(to right, red , yellow);
+  background-image: linear-gradient(to bottom right, rgb(142, 164, 189), rgb(156, 118, 139));
   width: auto;
-  height: 150px;
+  height: 100px;
   border: 2px;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 20px; 
-  margin-top: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 5vw;
+  position: relative;
+  color: white;
+  text-align: center;
 }
 
 #slider {
